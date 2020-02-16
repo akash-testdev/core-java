@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .accordion 
+            {
+              background-color: #eee;
+              color: #444;
+              cursor: pointer;
+              padding: 18px;
+              width: 100%;
+              border: none;
+              text-align: left;
+              outline: none;
+              font-size: 15px;
+              transition: 0.4s;
+            }
+
+            .active, .accordion:hover 
+            {
+              background-color: #ccc;
+            }
+
+            .accordion:after 
+            {
+              content: '\002B';
+              color: #777;
+              font-weight: bold;
+              float: right;
+              margin-left: 5px;
+            }
+
+            .active:after 
+            {
+              content: "\2212";
+            }
+
+            .panel 
+            {
+              padding: 0 18px;
+              background-color: white;
+              max-height: 0;
+              overflow: hidden;
+              transition: max-height 0.2s ease-out;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h2>Overview</h2>
+        <p>This file contains questions and answers corresponding to the chapter <b>An overview of Java</b> from the book <b>The Complete Reference</b> by Herbert Schildt</p>
+        
+        <button class="accordion">Question 1</button>
+        <div class="panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion">Can a java file contain many classes?</button>
+        <div class="panel">
+          <p>Yes, a java file can contain as many classes as the user wants to have in the java file.</p>
+        </div>
+
+        <button class="accordion">Can many classes in a java file contain 'main()' method OR only one class in a java file should contain 'main()' method?</button>
+        <div class="panel">
+          <p>It is not necessary that only one class in a java file should contain 'main()' method. Any number of classes can contain 'main()' method.</p>
+        </div>
+        
+        <button class="accordion">What should be the name of the file on which we write our java program ? Should the name of the file be similar to the name of the class that contains the main method?</button>
+        <div class="panel">
+          <p>The name of the file on which we write our source code could be any valid name not necessarily similar to the name of the class that contains the 'main()' method. What if the source file has multiple classes and each class has a main() method ? Thus, The name of the file on which we write our source code could be any valid name not necessarily similar to the name of the class that contains the 'main()' method.</p>
+        </div>
+        
+        <button class="accordion">What is the syntax for compiling the java code?</button>
+        <div class="panel">
+          <p>javac filename.java. Example - javac ABC.java</p>
+        </div>
+        
+        <button class="accordion">What happens when we compile a java file?</button>
+        <div class="panel">
+          <p>Class files corresponding to all the classes in the java file get generated.</p>
+        </div>
+        
+        <button class="accordion">Can a java file be compiled without a class?</button>
+        <div class="panel">
+          <p>No, the java file must have atleast one class defined for compilation. (Try to break this)</p>
+        </div>
+        
+        <button class="accordion">What is the syntax for executing a java file?</button>
+        <div class="panel">
+          <p>Java file is never executed, it is the class file that is executed. The syntax is - java filename (Note that here we do not mention the extension of the file which is .class)</p>
+        </div>
+        
+        <button class="accordion">When a java file is compiled, class files corresponding to the classes defined in the java file are generated. Similarly, when we execute the class file, are any new files generated ? If yes, what is the extension of such a file?</button>
+        <div class="panel">
+          <p>No, on executing a class file, no other file is generated.</p>
+        </div>
+        
+        <button class="accordion">Consider a file which has not been saved. Answer the questions that follow :<br>  
+                                  (i) Can we save this file as "A.java" ??<br>
+                                  (ii) Can we save this file as "B.java" ??<br>
+                                  (iii) Can we save this file as "C.java" ??<br>
+                                  (iv) Can we save this file as "ABC.java" ??
+        </button>
+        <div class="panel">
+          <p>Yes, Yes, Yes, Yes - We can save the source file with any name.</p>
+        </div>
+        
+        <button class="accordion">What is a general convention for naming the java source file ? Also explain the reason behind such a convention?</button>
+        <div class="panel">
+          <p>The general convention is - "The name of the java source file should be similar to the name of the class that contains the main() method". This convention is completely wrong but is prevelant because mostly the scenario is that a java file contains multiple classes but only one of these class contains the main() method (although multiple classes in the same source file can contain main() method). Now, if we keep the name of the java source file similar to the name of the class that contains the main() method then we can compile and execute the code using the same name i.e the name of the class that contains the main() method or the name of the java source file (which is kept similar to the name of the class that contains the main() method)</p>
+        </div>
+        
+        <button class="accordion">Can we define a class without main() method ? If yes, what happens when to try to execute this class?</button>
+        <div class="panel">
+          <p>Yes, When we try to execute this class, we get a runtime error as - "Main method not found".</p>
+        </div>
+        
+        <button class="accordion">When is the convention - "The name of the java source file should be similar to the name of the class that contains the main() method" valid and invalid?</button>
+        <div class="panel">
+          <p>
+              Valid in 2 cases :<br>
+                - When there is only one class in the java file and this class contains the main() method.<br>
+                - When there are multiple classes in the java file but only one of them contains the main() method.<br>
+                <br>
+                Invalid in 1 case :<br>
+                - When there are multiple classes in the java file and more than one of them contain the main() method.
+          </p>
+        </div>
+        
+        <button class="accordion">Can a class contain more than one main() methods?</button>
+        <div class="panel">
+          <p>No, each class should contain only one main() method</p>
+        </div>
+        
+        <button class="accordion">Is Java a case sensitive language?</button>
+        <div class="panel">
+          <p>Yes, java is a case sensitive language. For eg, int cannot be written as INT in java.</p>
+        </div>
+        
+        <button class="accordion">Suppose there is a java file that contains one or more classes and none of these classes contains the main() method. Will this java file compile and run successfully ? Give reasons for your answer.</button>
+        <div class="panel">
+          <p>The java file will compile successfully but will not run successfully. It is because, while invoking the java compiler during compilation, the java compiler does not issue a call to the main() method. It simply checks for syntactical errors in code. So this is the reason why such a source file compiles successfully. But, when we execute such a source file then the execution reports an error. It is because, when we execute a java source file, then the jvm issues a call to the main() method, and since in this case, the jvm will not be able to locate the main() method it reports an error. So, the concept to remember is, "main() function is not called during compilation, it is called during execution by the java compiler.</p>
+        </div>
+        
+        <button class="accordion">What is the extension of the java source file?</button>
+        <div class="panel">
+          <p>".java"</p>
+        </div>
+        
+        <button class="accordion">What is the general syntax for compiling the java source file?</button>
+        <div class="panel">
+          <p>[name of the java compiler] [name of the source file along with extension]. Ex, javac Abc.java</p>
+        </div>
+        
+        <button class="accordion">What is byte code?</button>
+        <div class="panel">
+          <p>Byte code is a set of instructions that is obtained on compiling a java source code.</p>
+        </div>
+        
+        <button class="accordion">What is the extension of the file that contains the byte code?</button>
+        <div class="panel">
+          <p>".class"</p>
+        </div>
+        
+        <button class="accordion">Mention 2 important characteristics of java that are provided by the byte code?</button>
+        <div class="panel">
+          <p>
+              Byte code provides :<br>
+              1. Portability to java programs<br>
+              2. Platform independence to java<br>
+          </p>
+        </div>
+        
+        <button class="accordion">How is the byte code generated?</button>
+        <div class="panel">
+          <p>
+              Byte code is generated on compiling the java source code or by issuing a call to the java compiler.
+          </p>
+        </div>
+        
+        <button class="accordion">Why is java platform independent or why are java programs portable?</button>
+        <div class="panel">
+          <p>
+              Java is platform independent/ portable because of the byte code. On compiling a java source file, some ".class" files are generated that contain byte code. Now, since the byte code can be executed on any OS, therefore java is platform independent and java programs are portable.
+          </p>
+        </div>
+        
+        <button class="accordion">How is the byte code executed?</button>
+        <div class="panel">
+          <p>
+              Byte code is executed by jvm (java virtual machine) when we run our java program.
+          </p>
+        </div>
+        
+        <button class="accordion">What happens when byte code is executed?</button>
+        <div class="panel">
+          <p>
+              Byte code gets converted into machine code.
+          </p>
+        </div>
+        
+        <button class="accordion">What is machine code?</button>
+        <div class="panel">
+          <p>
+              Machine code contains a set of instructions that are written in binary form. This machine code can directly be executed by the OS.
+          </p>
+        </div>
+        
+        <button class="accordion">Explain the significance of the command: java ABC</button>
+        <div class="panel">
+          <p>
+              This command issues a call to jvm (java virtual machine) and asks jvm to execute the byte code that is present in the "ABC.class" file. The byte code present in the file "ABC.class" is executed and converted into machine code by the jvm.
+          </p>
+        </div>
+
+        <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+          });
+        }
+        </script>
+
+    </body>
+</html>
