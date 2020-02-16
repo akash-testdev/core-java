@@ -213,6 +213,105 @@
               This command issues a call to jvm (java virtual machine) and asks jvm to execute the byte code that is present in the "ABC.class" file. The byte code present in the file "ABC.class" is executed and converted into machine code by the jvm.
           </p>
         </div>
+        
+        <button class="accordion">FIB : The java source file has ________ extension. This java source file is executed by the _______ and we get _________ which has _________ extension</button>
+        <div class="panel">
+          <p>
+              ".java", compiler [javac], byte code, ".class"
+          </p>
+        </div>
+        
+        <button class="accordion">FIB (continued) :  This byte code is executed by the _______ and we get ________ which is executed by the __________ </button>
+        <div class="panel">
+          <p>
+              jvm [java], machine code, OS
+          </p>
+        </div>
+        
+        <button class="accordion">FIB : On compiling we get ________ and on running we get ___________</button>
+        <div class="panel">
+          <p>
+              byte code, machine code
+          </p>
+        </div>
+        
+        <button class="accordion">How is the process of executing programs in Java different as compared to other languages?</button>
+        <div class="panel">
+          <p>
+              All languages need to convert the source code into machine code so that this code can be understood and executed by the OS. In Java, this is a 2 step process where as in other programming languages, this is a 1 step process. In Java, the compiler converts the source code into byte code and then in the 2nd step, the jvm converts this byte code into machine code. However, in other languages, the source code is directly converted into machine code by the compiler. So this is where Java is different as compared to other languages w.r.t the process of program execution.
+          </p>
+        </div>
+        
+        <button class="accordion">Why is the execution time of java programs more as compared to other programming languages?</button>
+        <div class="panel">
+          <p>
+              The execution time of a program is nothing but the time in which the source code gets converted into machine code and gets executed by the OS. In the case of most other programming languages like C, the source code on compilation is directly converted into machine code and is executed by the OS thereafter. So, this is the reason why programming languages like C have very low compilation time. On the other hand, in the case of java, the execution time or the time in which the source code is converted into machine code and executed by the OS is more because, the source code is not directly converted into machine code by the compiler. The compiler converts the source code into byte code. This byte code is now converted into machine code by the jvm and then executed by the OS. So, this is the reason why the execution time of java programs is much more as compared to other programming languages.
+          </p>
+        </div>
+        
+        <button class="accordion">Give 2 advantages and 1 disadvantage of byte code?</button>
+        <div class="panel">
+          <p>
+              Advantages : <br>
+              1. Byte code provides portability to java programs<br>
+              2. Byte code is responsible for platform independent nature of java<br>
+              <br>
+              Disadvantage :<br>
+              1. The presence of byte code in between source code and machine code increase the execution time of java programs thereby compromising on the performance of java
+          </p>
+        </div>
+        
+        <button class="accordion">What is JIT?</button>
+        <div class="panel">
+          <p>
+              JIT is an acronym for Just-In-Time. JIT is a compiler that is a part of JVM and helps JVM to convert the byte code into machine code in a much lesser time as compared to the case when JIT is not included in JVM. Thus, JIT is a part of JVM that improves the performance of JVM by helping JVM to convert byte code into machine code at a much faster rate.
+          </p>
+        </div>
+        
+        <button class="accordion">What mechanism does JIT apply to improve the performance of JVM?</button>
+        <div class="panel">
+          <p>
+              Although there are many mechanisms that JIT uses for improving the performance of JVM, here is one of the approach - The JIT groups similar instructions (for example, all instrctions involving printing to console or System.out.println() )together and converts them into machine code at the same time (Had there been only JVM, it would have converted even the similar instructions one by one into machine code thereby requiring more time).
+          </p>
+        </div>
+        
+        <button class="accordion">What is the difference between a compiled language and an interpreted language?</button>
+        <div class="panel">
+          <p>
+              A compiled language is one in which the source code is directly converted to machine code on compilation. Ex, C<br>
+              <br>    
+              For example, an addition "+" operation in your source code could be translated directly to the "ADD" instruction in machine code.<br>
+              <br>
+              X + Y (SOURCE CODE) -------> 0010110100010011110010111 (MACHINE CODE)<br>
+              <br>
+              where as,<br>
+              <br>
+              An interpreted language is one in which the source code is not directly converted to machine code. Instead, it is converted to some intermediate code (which is called byte code in the case of java) and then this intermediate code is then converted into machine code. Ex, Java<br>
+              <br>
+              X + Y (SOURCE CODE) -------> ^&*S^#@!# (INTERMEDIATE CODE) -------> 0010110100010011110010111 (MACHINE CODE)
+          </p>
+        </div>
+        
+        <button class="accordion">Is Java a compiled language or an interpreted language? Give reason.</button>
+        <div class="panel">
+          <p>
+              Interpreted because the source code is not directly conveted to machine code.
+          </p>
+        </div>
+        
+        <button class="accordion">How is the byte code responsible for platform independent nature of java?</button>
+        <div class="panel">
+          <p>
+              When we compile a java source file , we get its byte code. This is a ".class" file. We can simple copy this ".class" file containing the byte code in a pendrive and copy it on machines having different environments and OS's. Now, any machine that has JVM installed on it will be able to execute this ".class" file and that is why, java is platform independent. (Here we assume that all machines have JVM installed on them).
+          </p>
+        </div>
+        
+        <button class="accordion">Is JVM platform dependent?</button>
+        <div class="panel">
+          <p>
+              Yes, JVM is platform dependent. We have different JVM's available depending upon the OS's. For example, the JVM installed on a windows machine will not work if installed on a UNIX machine. Thus, although Java is platform independent yet JVM is platform dependent.
+          </p>
+        </div>
 
         <script>
         var acc = document.getElementsByClassName("accordion");
